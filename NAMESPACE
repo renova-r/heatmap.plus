@@ -1,5 +1,7 @@
-# Default NAMESPACE created by R
-# Remove the previous line if you edit this file
+importFrom("graphics", "axis", "frame", "image", "layout", "mtext",
+           "par", "title")
+importFrom("stats", "as.dendrogram", "dist", "hclust", "order.dendrogram",
+           "reorder", "sd")
 
 # Export all names
 exportPattern(".")

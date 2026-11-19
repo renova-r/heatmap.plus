@@ -6,7 +6,16 @@
   Call exactly as you would the base heatmap() function.  Only two optional parameters' values should differ, RowSideColors and ColSideColors.  They should be matrices instead of vectors, where colnames() on each matrix is a vector of the annotation track names.  One annotation track will be drawn per column.  See help('heatmap') for documentation of arguments not documented here.
 }
 \usage{
-heatmap.plus(x, Rowv = NULL, Colv = if (symm) "Rowv" else NULL, distfun = dist, hclustfun = hclust, reorderfun = function(d, w) reorder(d, w), add.expr, symm = FALSE, revC = identical(Colv, "Rowv"), scale = c("row", "column", "none"), na.rm = TRUE, margins = c(5, 5), ColSideColors, RowSideColors, cexRow = 0.2 + 1/log10(nr), cexCol = 0.2 + 1/log10(nc), labRow = NULL, labCol = NULL, main = NULL, xlab = NULL, ylab = NULL, keep.dendro = FALSE, verbose = getOption("verbose"), ...)
+heatmap.plus(x, Rowv = NULL, Colv = if (symm) "Rowv" else NULL,
+             distfun = dist, hclustfun = hclust,
+             reorderfun = function(d, w) reorder(d, w), add.expr,
+             symm = FALSE, revC = identical(Colv, "Rowv"),
+             scale = c("row", "column", "none"), na.rm = TRUE,
+             margins = c(5, 5), ColSideColors, RowSideColors,
+             cexRow = 0.2 + 1/log10(nr), cexCol = 0.2 + 1/log10(nc),
+             labRow = NULL, labCol = NULL, main = NULL, xlab = NULL,
+             ylab = NULL, keep.dendro = FALSE,
+             verbose = getOption("verbose"), ...)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
@@ -66,11 +75,7 @@ heatmap.plus(x, Rowv = NULL, Colv = if (symm) "Rowv" else NULL, distfun = dist, 
 
 
 }
-\details{ }
-\value{ }
-\references{ }
 \author{ Allen Day }
-\note{ }
 \seealso{ \code{\link{heatmap}} }
 \examples{
   z = matrix(rnorm(30),nrow=5,ncol=6);
